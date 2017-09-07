@@ -5,7 +5,7 @@
 # License: GNU GPLv3
 
 # Close Chromium
-killall chromium
+sudo killall chromium
 
 # Download
 wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/chromium-browser.tar.gz
@@ -14,4 +14,9 @@ wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.1
 tar -zxvf chromium-browser.tar.gz
 
 # Move to lib
+sudo rm -r /usr/lib/chromium-browser
 sudo mv chromium-browser /usr/lib/
+
+# Clean
+rm chromium-browser.tar.gz
+
