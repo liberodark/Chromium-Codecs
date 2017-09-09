@@ -4,6 +4,34 @@
 # Author: liberodark
 # License: GNU GPLv3
 
+# Check Software
+which chromium &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Error Chromium is not Installed"
+    exit
+else
+    echo "Chromium is Installed"
+fi
+
+which wget &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Error wget is not Installed"
+    exit
+else
+    echo "wget is Installed"
+fi
+
+which pkill &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Error pkill is not Installed"
+    exit
+else
+    echo "pkill is Installed"
+fi
+
 # Close Chromium
 pkill chromium &> /dev/null
 
@@ -60,4 +88,3 @@ if [[ "$?" != 0 ]]; then
 else
     echo "Download is Cleaned"
 fi
-
