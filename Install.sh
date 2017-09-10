@@ -72,6 +72,7 @@ if [[ "$?" != 0 ]]; then
     exit
 else
     echo "Download is correctly checked"
+    rm md5.sig
 fi
 
 # Extract
