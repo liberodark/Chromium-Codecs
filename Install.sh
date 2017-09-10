@@ -18,6 +18,10 @@ which wget &> /dev/null
 
 if [[ "$?" != 0 ]]; then
     echo "Error wget is not Installed"
+    sudo apt install wget
+    sudo pacman -S wget
+    sudo yum install wget
+    echo "wget is now Installed"
     exit
 else
     echo "wget is Installed"
@@ -45,14 +49,30 @@ fi
 wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/chromium-browser.tar.gz &> /dev/null
 
 if [[ "$?" != 0 ]]; then
-    echo "Error downloading file"
+    echo "Error downloading chromium-browser.tar.gz"
 else
-    echo "Download Success"
+    echo "Download Success codec"
 fi
 
 # Check MD5
-#wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/md5.sig
-#if ! md5sum -c md5.sig; then
+wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/md5.sig &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Error downloading md5"
+    exit
+else
+    echo "Download Success md5"
+fi
+
+md5sum -c md5.sig &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Download is not correctly checked"
+    rm chromium-browser.tar.gz
+    exit
+else
+    echo "Download is correctly checked"
+fi
 
 # Extract
 tar -zxvf chromium-browser.tar.gz &> /dev/null
