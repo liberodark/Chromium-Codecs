@@ -18,9 +18,10 @@ which wget &> /dev/null
 
 if [[ "$?" != 0 ]]; then
     echo "Error wget is not Installed"
-    sudo apt install wget
+    sudo apt-get install wget
     sudo pacman -S wget
     sudo yum install wget
+    sudo dnf install wget
     echo "wget is now Installed"
     exit
 else
