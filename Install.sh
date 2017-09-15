@@ -47,7 +47,7 @@ else
 fi
 
 # Download
-wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/chromium-browser.tar.gz &> /dev/null
+wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113-1/chromium-browser.tar.gz &> /dev/null
 
 if [[ "$?" != 0 ]]; then
     echo "Error downloading chromium-browser.tar.gz"
@@ -56,7 +56,7 @@ else
 fi
 
 # Check MD5
-wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113/md5.sig &> /dev/null
+wget https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113-1/md5.sig &> /dev/null
 
 if [[ "$?" != 0 ]]; then
     echo "Error downloading md5"
