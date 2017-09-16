@@ -94,12 +94,36 @@ else
     echo "Old Codec is Removed"
 fi
 
+cd chromium-browser &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Enter is not Possible"
+else
+    echo "Enter is Possible"
+fi
+
+sudo mv libwidevinecdm.so /usr/lib/chromium/ &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Codec Netflix is not Installed"
+else
+    echo "Codec Netflix is Installed"
+fi
+
+cd .. &> /dev/null
+
+if [[ "$?" != 0 ]]; then
+    echo "Back is not Possible"
+else
+    echo "Back is done"
+fi
+
 sudo mv chromium-browser /usr/lib/ &> /dev/null
 
 if [[ "$?" != 0 ]]; then
-    echo "Codec is not Installed"
+    echo "Codec FFmpeg is not Installed"
 else
-    echo "Codec is Installed"
+    echo "Codec FFmpeg is Installed"
 fi
 
 # Clean
