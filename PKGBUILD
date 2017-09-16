@@ -6,7 +6,6 @@ pkgrel=1
 pkgdesc="additional support for proprietary codecs for chromium x264 and netflix"
 arch=('x86_64')
 url="https://ffmpeg.org/"
-url="http://www.widevine.com/"
 license=('custom')
 depends=('xdg-utils')
 source_x86_64=("https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113-1/chromium-browser.tar.gz")
