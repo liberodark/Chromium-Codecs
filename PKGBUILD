@@ -1,15 +1,15 @@
 # Maintainer: liberodark
 
 pkgname=chromium-codecs
-pkgver=60.0.3112.113
+pkgver=62.0.3202.89
 pkgrel=1
 pkgdesc="additional support for proprietary codecs for chromium x264 and netflix"
 arch=('x86_64')
 url="https://ffmpeg.org/"
 license=('custom')
 depends=('xdg-utils')
-source_x86_64=("https://github.com/liberodark/Chromium-Codecs/releases/download/60.0.3112.113-1/chromium-browser.tar.gz")
-sha512sums_x86_64=('72eb181d306e817bd1d6e998d97f3314074a0c58dc7a95bf241a27d60a8c086724815d1695b0338c455348a1c6e6690698f591c34c7fc71f72d2f3a7a0fd173b')
+source_x86_64=("https://github.com/liberodark/Chromium-Codecs/releases/download/${pkgver}/chromium-browser.tar.gz")
+sha512sums_x86_64=('e5b94098b6630aabb51f03d5643405021aecdfb4a04fbcb48d3ced1a131327cca4544ec75502647682dc52a767f55097df82c544eaf24e05ebdcc746bf7c3fe0')
         
 package() {
   cd $srcdir
