@@ -17,5 +17,5 @@ package() {
   cp -r chromium-browser $pkgdir
   rm -r $pkgdir/chromium-browser
   install -vDm644 $srcdir/chromium-browser/libffmpeg.so $pkgdir/usr/lib/chromium-browser/libffmpeg.so
-  install -vDm644 $srcdir/chromium-browser/libwidevinecdm.so "$pkgdir/usr/lib/chromium/libwidevinecdm.so"
+  install -vDm644 $srcdir/chromium-browser/libwidevinecdm.so $pkgdir/usr/lib/chromium/libwidevinecdm.so
 }
