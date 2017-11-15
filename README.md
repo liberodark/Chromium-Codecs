@@ -1,2 +1,2 @@
 # Chromium-Codecs
-chromium-codecs-ffmpeg-extra for linux x64
+chromium-codecs-ffmpeg-extra / netflix support for Manjaro x64 and Linux x64
